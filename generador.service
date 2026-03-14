@@ -1,0 +1,16 @@
+[Unit]
+Description=Generador de Imágenes IA (FastAPI - puerto 8098)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/var/www/generador-imagenes
+ExecStart=/var/www/chatbot/venv/bin/uvicorn api:app --host 127.0.0.1 --port 8098
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/www/generador-imagenes/api.log
+StandardError=append:/var/www/generador-imagenes/api.log
+
+[Install]
+WantedBy=multi-user.target
