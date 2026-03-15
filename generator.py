@@ -12,31 +12,43 @@ load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN", "")
 MODEL = os.getenv("HF_MODEL", "black-forest-labs/FLUX.1-schnell")
 
-# Estilos predefinidos — prefijos de prompt para card images
+# Estilos predefinidos — prefijos de prompt
 STYLES = {
     "ninguno": {
         "label": "Sin estilo (prompt libre)",
         "prefix": "",
     },
     "card_tech": {
-        "label": "Card proyecto tech",
-        "prefix": "Professional software project card image, dark navy background, neon cyan accents, futuristic UI elements, tech aesthetic, clean composition, ",
+        "label": "Tech / Dark UI",
+        "prefix": "Dark navy background, neon cyan accents, futuristic UI elements, tech aesthetic, clean digital composition, professional illustration, ",
     },
     "card_educacion": {
-        "label": "Card proyecto educación",
-        "prefix": "Colorful educational illustration, friendly cartoon characters, children learning with technology, bright pastel colors, clean modern design, ",
+        "label": "Educación / Colorido",
+        "prefix": "Colorful educational illustration, friendly cartoon characters, learning and technology, bright pastel colors, clean modern design, playful style, ",
     },
     "card_finanzas": {
-        "label": "Card proyecto finanzas",
-        "prefix": "Financial data visualization, dark professional background, glowing charts and graphs, gold and blue accents, wall street aesthetic, ",
+        "label": "Finanzas / Wall St.",
+        "prefix": "Financial data visualization, dark professional background, glowing charts and graphs, gold and blue accents, wall street aesthetic, dramatic lighting, ",
     },
     "card_ia": {
-        "label": "Card proyecto IA / ML",
-        "prefix": "Artificial intelligence concept art, neural network visualization, glowing nodes and connections, dark background, purple and cyan gradient, ",
+        "label": "IA / Neural",
+        "prefix": "Artificial intelligence concept art, neural network visualization, glowing nodes and connections, dark background, purple and cyan gradient, abstract digital, ",
     },
     "card_api": {
-        "label": "Card proyecto API",
-        "prefix": "API integration concept, connected systems, code snippets, dark terminal aesthetic, green matrix-style accents, clean technical illustration, ",
+        "label": "API / Backend",
+        "prefix": "Connected systems concept, server infrastructure, code and data flow, dark terminal aesthetic, green matrix-style accents, clean technical illustration, ",
+    },
+    "card_naturaleza": {
+        "label": "Naturaleza / Paisaje",
+        "prefix": "Stunning natural landscape, vivid colors, dramatic lighting, photorealistic style, high detail, cinematic composition, ",
+    },
+    "card_retro": {
+        "label": "Retro / Synthwave",
+        "prefix": "Retro synthwave aesthetic, neon grid, sunset gradient, 80s vaporwave style, vivid pink and purple, detailed illustration, ",
+    },
+    "card_minimalista": {
+        "label": "Minimalista",
+        "prefix": "Minimalist clean illustration, simple shapes, limited color palette, white background, elegant modern design, geometric, ",
     },
 }
 
